@@ -40,7 +40,6 @@ router.post('/getCart', async(req,res)=>{
 router.post('/getCartProduct',async(req,res)=>{
     var seq = req.body.seq;
     var seqArr = seq.split(',');
-    console.log(seqArr[0]);
     var productArr = [];
     for(var i = 0; i < seqArr.length; i++){
         try{
@@ -51,6 +50,18 @@ router.post('/getCartProduct',async(req,res)=>{
         }
     }
     res.json(productArr);
+});
+
+router.post('/cart/deleteAction', async(req,res)=>{
+    try{
+        var seq = req.body.seq;
+        var cart = await new Cart(seq,req.user.user_id).cartDelete();
+        console.log(cart);
+        res.json(cart);
+    }catch(err){
+        console.log(err);
+    }
+    
 });
 
 module.exports = router;

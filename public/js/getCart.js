@@ -6,8 +6,8 @@ function cartProductTamplate(data){
         var template = `
         <tr class="item_num">
             <td>
-                <input type="checkbox" name="wish_list1" id="wish_list1" class="wish_check">
-                <label for="wish_list1" class="check_box"></label>
+                <input type="checkbox" name="wish_list" id="wish_list${i}" class="wish_check">
+                <label for="wish_list${i}" class="check_box"></label>
             </td>
             <td>
                 <img src="/public/img/flower.jpg" alt="상품이미지">
@@ -26,7 +26,7 @@ function cartProductTamplate(data){
         <td class="order_pirce">0</td>
         <td>
             <p class="order_btn">주문하기</p>
-            <p class="cancel_btn">삭제</p>
+            <p class="cancel_btn" value="${data[i][0].product_seq}">삭제</p>
         </td>
         </tr>
         `

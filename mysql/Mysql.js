@@ -16,7 +16,6 @@ class Mysql{
 
     connection(){
         this.db = mysql.createConnection(this.mysql);
-        console.log("connection : 커넥션 완료");
     }
 
     selectTable(){

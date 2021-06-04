@@ -15,7 +15,13 @@ function wishList(){
   });
 
   checkBox.click(function () {
-    if (checkBox.prop("checked").length == item_count.length) {
+    var allCheck = true;
+    for(var i = 0; i < checkBox.length; i++){
+      if(!checkBox.eq(i).is(":checked")){
+        allCheck = false;
+      }
+    }
+    if (allCheck) {
       allCheckBox.prop("checked", true);
     } else {
       allCheckBox.prop("checked", false);
@@ -27,20 +33,22 @@ function wishList(){
   var countUpBtn = $('.up_btn');
   var countDownBtn = $('.down_btn');
 
-  countUpBtn.each(function () {
+  countUpBtn.each(function (index) {
     $(this).on("click", function () {
       var countElement = $(this).parent().prev();
       var nowCount = Number(countElement.text());
       countElement.text(nowCount = nowCount + 1);
       var price = $(this).parent().parent().parent().prev();
       sumPrice(nowCount, price);
+      checkBox.eq(index).prop("checked",true);
     });
   });
-  countDownBtn.each(function () {
+  countDownBtn.each(function (index) {
     $(this).on("click", function () {
       var countElement = $(this).parent().prev();
       var nowCount = Number(countElement.text());
       countElement.text(nowCount <= 0 ? 0 : nowCount = nowCount - 1);
+      if(nowCount == 0) checkBox.eq(index).prop("checked",false);
       var price = $(this).parent().parent().parent().prev();
       sumPrice(nowCount, price);
     });
@@ -71,5 +79,8 @@ function wishList(){
   shoping.on("click", function () {
     history.back();
   });
+
+  cartDelete();
+
 }
 

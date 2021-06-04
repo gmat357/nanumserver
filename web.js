@@ -51,6 +51,7 @@ app.post('/getSession',loginRouter);
 app.post('/getProductSub/:page',productRouter);
 app.post('/getCart', cartRouter);
 app.post('/getCartProduct', cartRouter);
+app.post('/cart/deleteAction',cartRouter);
 
 app.listen(port, (req,res)=>{
     console.log(`${port} 나눔마트 서버가 열렸습니다.`);
