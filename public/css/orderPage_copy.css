@@ -1,0 +1,245 @@
+.delivery_wrap h5 {
+  text-align: left;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.delivery_wrap input,
+.delivery_wrap textarea,
+.delivery_wrap select {
+  outline: none;
+  padding: 1px 5px;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  font-weight: 700;
+}
+
+.delivery_wrap .delivery_table {
+  width: 100%;
+  margin: 15px 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.delivery_wrap .delivery_table tbody tr th {
+  padding: 5px;
+  font-size: 14px;
+  background: #f9fbf6;
+  border: 1px solid #bbb;
+  font-weight: 700;
+}
+
+.delivery_wrap .delivery_table tbody tr td {
+  border: 1px solid #bbb;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.delivery_wrap .delivery_table tbody tr td .sample6_btn {
+  background: #f9fbf6;
+  cursor: pointer;
+  width: 80px;
+}
+
+.delivery_wrap .pay_method {
+  border: 1px solid #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+}
+
+.delivery_wrap .pay_method .pay_method_area {
+  width: 80%;
+  text-align: left;
+  border-right: 1px solid #777;
+}
+
+.delivery_wrap .pay_method .pay_method_area .methods_list {
+  border-bottom: 4px double #bbb;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delivery_wrap .pay_method .pay_method_area .methods_list input {
+  margin-right: 5px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .methods_list label {
+  margin-right: 20px;
+  border: 1px solid #bbb;
+  padding: 5px;
+  background: #f4f4f4;
+  -webkit-box-shadow: 1px 1px 3px #c8c8c8;
+          box-shadow: 1px 1px 3px #c8c8c8;
+  font-family: "S-CoreDream-5Medium";
+  color: #777;
+  border-radius: 3px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .methods_list input:checked + label {
+  color: #0e4800;
+  background: #ffffff;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_no_bankbook {
+  padding: 20px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_no_bankbook table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_no_bankbook table tr th {
+  border: 1px solid #bbb;
+  font-size: 14px;
+  background: #f9fbf6;
+  padding: 5px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_no_bankbook table tr td {
+  border: 1px solid #bbb;
+  padding: 5px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_no_bankbook::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #c6c6c6;
+  margin-top: 10px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt p {
+  width: 20%;
+  font-size: 14px;
+  font-family: "S-CoreDream-5Medium";
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt .receipt_info {
+  width: 80%;
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt .receipt_info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt .receipt_info table tr {
+  display: none;
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt .receipt_info table tr th {
+  width: 20%;
+  padding: 5px;
+  font-size: 14px;
+  background: #f9fbf6;
+  border: 1px solid #bbb;
+}
+
+.delivery_wrap .pay_method .pay_method_area .receipt .receipt_info table tr td {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_card,
+.delivery_wrap .pay_method .pay_method_area .result_transfer {
+  display: none;
+  padding: 20px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_card p,
+.delivery_wrap .pay_method .pay_method_area .result_transfer p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_card p b::before,
+.delivery_wrap .pay_method .pay_method_area .result_transfer p b::before {
+  content: "!";
+  display: inline-block;
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  font-size: 10px;
+  padding: 0 1px;
+  padding-bottom: 4px;
+  color: red;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_transfer {
+  display: none;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_transfer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_transfer table tr th {
+  padding: 5px;
+  font-size: 14px;
+  background: #f9fbf6;
+  border: 1px solid #bbb;
+}
+
+.delivery_wrap .pay_method .pay_method_area .result_transfer table tr td {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+}
+
+.delivery_wrap .pay_method .pay_submit {
+  width: 20%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delivery_wrap .pay_method .pay_submit li {
+  width: 100%;
+  text-align: right;
+}
+
+.delivery_wrap .pay_method .pay_submit li p {
+  padding: 10px 0;
+}
+
+.delivery_wrap .pay_method .pay_submit li p .final_price {
+  font-size: 24px;
+}
+
+.delivery_wrap .pay_method .pay_submit li input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+}

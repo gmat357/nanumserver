@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/wishList.css">
+  <link rel="stylesheet" href="../css/orderPage.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <title>나눔마트</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <section class="section">
+    <div class="wish_wrap">
+      <img src="../img/wish2.jpg" alt="주문서작성">
+      <form action="#">
+        <table class="wish_table">
+          <thead>
+            <tr>
+              <th colspan=" 6" class="wish_count">일반상품 0개</th>
+            </tr>
+            <tr>
+              <th>
+                <input type="checkbox" name="all_check" id="all_check">
+                <label for="all_check" class="check_box" id="all_check_box"></label>
+              </th>
+              <th>이미지</th>
+              <th>상품정보</th>
+              <th>판매가</th>
+              <th>수량</th>
+              <th>합계</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="item_num">
+              <td>
+                <input type="checkbox" name="wish_list1" id="wish_list1" class="wish_check">
+                <label for="wish_list1" class="check_box"></label>
+              </td>
+              <td>
+                <img src="../img/flower.jpg" alt="상품이미지">
+              </td>
+              <td>상품명</td>
+              <td class="item_price"><span>10000</span> 원</td>
+              <td>
+                <ul style="border:none">
+                  <li class="order_item_count" style="border:none">0</li>
+                  <!-- <li class="count_btn">
+                    <p class="up_btn"></p>
+                    <p class="down_btn"></p>
+                  </li> -->
+                </ul>
+              </td>
+              <td class="order_pirce" style="border-right: 1px solid #bbb;">0</td>
+            </tr>
+            <tr class="sum_price_area">
+              <td colspan="7">상품구매금액 총 합계 : <b class="sum_price"></b><span> 원</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="select_product">
+          <p>선택한상품을</p>
+          <p class="select_cancel_btn">삭제</p>
+        </div>
+        <div class="submit_area">
+        </div>
+        <div class="delivery_wrap">
+          <h5>배송정보</h5>
+          <table class="delivery_table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <th>배송지 선택</th>
+                <td>
+                  <input type="radio" name="delivery_info" id="user_delivery" value="user_delivery" checked>
+                  <label for="user_delivery">회원정보와 동일</label>
+                  <input type="radio" name="delivery_info" id="new_delivery" value="new_delivery">
+                  <label for="new_delivery">새로운 배송지</label>
+                </td>
+              </tr>
+              <tr>
+                <th>받으시는 분</th>
+                <td><input type="text" name="recipient" id="recipient" required></td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td>
+                  <span>
+                    <input type="text" id="sample6_postcode" placeholder="우편번호" name="address" required>
+                    <input type="button" onclick="sample6_execDaumPostcode()" class="sample6_btn" value="우편번호">
+                  </span>
+                  <input type="text" id="sample6_address" placeholder="주소" name="address" required>
+                  <input type="text" id="sample6_detailAddress" placeholder="상세주소" name="address" required>
+                  <input type="hidden" id="sample6_extraAddress" placeholder="참고항목" name="address">
+                </td>
+              </tr>
+              <tr>
+                <th>휴대전화</th>
+                <td>
+                  <select name="phoneNumber" id="phoneNumber">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="018">018</option>
+                    <option value="019">019</option>
+                  </select>
+                  <input type="text" name="middleNum" id="middleNum" required>
+                  <input type="text" name="lastNum" id="lastNum" required>
+                </td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td>
+                  <input type="text" name="user_mail_id" id="user_mail_id" required>
+                  <label for="user_mail_id">@</label>
+                  <input type="text" name="mail_domain" id="mail_domain" required>
+                  <select name="selectMail" id="selectMail">
+                    <option value="" selected="selected">- 이메일 선택 -</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="yahoo.com">yahoo.com</option>
+                    <option value="empas.com">empas.com</option>
+                    <option value="korea.com">korea.com</option>
+                    <option value="dreamwiz.com">dreamwiz.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="etc">직접입력</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>배송 메세지</th>
+                <td>
+                  <textarea name="delivery_msg" id="delivery_msg" cols="100" rows="4"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h5>결제수단</h5>
+          <div class="pay_method">
+            <ul class="pay_method_area">
+              <li class="methods_list">
+                <input type="radio" name="payment_methods" id="no_bankbook" value="no_bankbook" checked>
+                <label for="no_bankbook">무통장 입금</label>
+
+                <input type="radio" name="payment_methods" id="card" value="card">
+                <label for="card">카드결제</label>
+
+                <!-- <input type="radio" name="payment_methods" id="moblie_pay" value="moblie_pay">
+                <label for="moblie_pay">휴대폰결제</label>
+
+                <input type="radio" name="payment_methods" id="transfer" value="transfer">
+                <label for="transfer">실시간 계좌이체</label> -->
+              </li>
+              <li class="result_no_bankbook">
+                <table>
+                  <tr>
+                    <th>입금자명</th>
+                    <td><input type="text" name="depositor" id="depositor" required></td>
+                  </tr>
+                  <tr>
+                    <th>입금은행</th>
+                    <td>
+                      <select id="bankaccount" name="bankaccount" fw-filter="" fw-label="무통장 입금은행" fw-msg="">
+                        <option value="-1">::: 선택해 주세요. :::</option>
+                        <option value="">은행이름:000000000000
+                          나눔마트</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+              </li>
+              <li class="receipt">
+                <p>현금영수증 신청</p>
+                <div class="receipt_info">
+                  <input type="radio" name="receipt_check" id="receipt_true" value="receipt_true">
+                  <label for="receipt_true">현금영수증 신청</label>
+                  <input type="radio" name="receipt_check" id="receipt_false" value="receipt_false" checked>
+                  <label for="receipt_false">신청안함</label>
+                </div>
+              </li>
+            </ul>
+            <ul class="pay_submit">
+              <li>
+                <p>최종결제 금액</p>
+                <p style="color: rgb(255, 0, 0);"><b class="final_price">0</b>원</p>
+                <input type="submit" value="결제하기">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script>
+    $(".header").load("header.html");
+    $(".footer").load("footer.html");
+  </script>
+  <script src="../js/wishList.js"></script>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="../js/findPostNumber.js"></script>
+  <script src="../js/wishListOrder.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+header {
+  background: url(../img/top_bg.jpg);
+  width: 100%;
+  .top_banner_wrap {
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    .top_notice,
+    .top_event {
+      transition-duration: 0.3s;
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+    .top_notice {
+      border-left: 1px solid #a9a9a9;
+      border-right: 1px solid #a9a9a9;
+      a {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .top_event {
+      border-right: 1px solid #a9a9a9;
+      a {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .header_slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto !important;
+    .slider_item {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
