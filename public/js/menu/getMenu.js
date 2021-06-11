@@ -6,7 +6,7 @@ function menuTemplate(data) {
   var list_object = $(".category");
   for (var i = 0; i < data.length; i++) {
     template = `
-    <a href = "#######">
+    <a href="/category/product?menuPath=${data[i].menu_seq}">
     <li class="category_list">
     <p>${data[i].menu_nm}</p>
     </li>

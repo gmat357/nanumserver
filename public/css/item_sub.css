@@ -1,3 +1,4 @@
+@charset "UTF-8";
 section {
   width: 1300px;
   padding: 20px 0 20px 210px;
@@ -19,8 +20,9 @@ section .product_item .product_info {
   padding: 40px;
 }
 
-section .product_item .product_info img {
-  width: 100%;
+section .product_item .product_info img[alt="제품이미지"] {
+  width: 450px;
+  height: 450px;
   display: block;
   border: 1px solid #999;
   margin-right: 50px;
@@ -68,8 +70,32 @@ section .product_item .product_info .product_text .order_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   right: 0;
+}
+
+section .product_item .product_info .product_text .order_box label {
+  font-size: 15px;
+  color: #777;
+  margin-right: 5px;
+}
+
+section .product_item .product_info .product_text .order_box input {
+  text-align: center;
+  width: 50px;
+  height: 40px;
+  font-size: 17px;
+  margin-right: 5px;
+  outline: none;
+  caret-color: #fff;
+}
+
+section .product_item .product_info .product_text .order_box input[type="number"]:hover::-webkit-inner-spin-button {
+  width: 17px;
+  height: 40px;
 }
 
 section .product_item .product_info .product_text .order_box img {

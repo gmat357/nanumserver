@@ -5,32 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/find.css">
-  <link rel="stylesheet" href="../css/setting.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="/public/css/find.css">
+  <link rel="stylesheet" href="/public/css/setting.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <title>나눔마트</title>
 </head>
 
 <body>
   <div class="login_container">
     <div class="login_box">
-      <form action="/lostPassIdAction" method="post">
-        <img src="../img/footer_logo.png" alt="로고">
+      <form action="">
+        <img src="/public/img/footer_logo.png" alt="로고">
         <div class="login_form">
           <h3>아이디 찾기</h3>
           <div class="input_container">
             <div class="text_box">
-              <input type="text" name="name" placeholder="이름" required><br>
-              <input type="text" name="email" placeholder="이메일" required>
+              <input type="text" name="name" class="name" placeholder="이름" required><br>
+              <input type="text" name="email" class="email" placeholder="이메일" required>
             </div>
             <div class="submit_box">
-              <input type="submit" value="찾기">
+              <input type="button" value="찾기" class="id_search">
             </div>
           </div>
+          <p class="result_id"><b style="color:red;" ></b></p>
           <p class="cencel_btn">취소</p>
         </div>
       </form>
     </div>
   </div>
 </body>
+<script src="/public/js/login/findId.js"></script>
 
 </html>

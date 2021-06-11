@@ -52,8 +52,7 @@ router.get('/productCart/:query',async (req,res)=>{
     }
     try{
         var productId = req.query.productId;
-        console.log(productId);
-        var cart = await new Cart(productId,req.user.user_id).cartInsert();
+        var cart = await new Cart().cartInsert(productId,req.user.user_id);
         res.send(`
             <script>
                 alert("장바구니에 담겼습니다.");
@@ -69,6 +68,31 @@ router.get('/productCart/:query',async (req,res)=>{
         `);
         console.log(err);
     }
-})
+});
+
+router.get('/category/:query',(req,res)=>{
+    res.sendFile(path.join(__dirname,"../public/html/sub.html"));
+});
+
+router.post('/getCategoryProduct/:page',async(req,res)=>{
+    try{
+        var page = req.params.page;
+        var product = await new Product().categoryProduct(page);
+        res.json(product);
+    }catch(err){
+        console.log(err);
+    }
+});
+
+router.post('/searchCategoryProduct/:page',async (req,res)=>{
+    try{
+        var searchText = req.body.text;
+        var page = req.params.page;
+        var product = await new Product().searchCategoryProduct(page,searchText);
+        res.json(product);
+    }catch(err){
+        console.log(err);
+    }
+});
 
 module.exports = router;

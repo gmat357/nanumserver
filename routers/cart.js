@@ -30,7 +30,7 @@ router.post('/getCart', async(req,res)=>{
     return;
     }
     try{
-        var cart = await new Cart("",req.user.user_id).cartSelect();
+        var cart = await new Cart().cartSelect(req.user.user_id);
         res.json(cart);
     }catch(err){
         console.log(err);
@@ -41,9 +41,10 @@ router.post('/getCartProduct',async(req,res)=>{
     var seq = req.body.seq;
     var seqArr = seq.split(',');
     var productArr = [];
+    var cart = new Cart();
     for(var i = 0; i < seqArr.length; i++){
         try{
-            var product = await new Cart(seqArr[i],"").cartGetSelect();
+            var product = await cart.cartGetSelect(seqArr[i]);
             productArr.push(product);
         }catch(err){
             console.log(err);
@@ -55,13 +56,24 @@ router.post('/getCartProduct',async(req,res)=>{
 router.post('/cart/deleteAction', async(req,res)=>{
     try{
         var seq = req.body.seq;
-        var cart = await new Cart(seq,req.user.user_id).cartDelete();
-        console.log(cart);
+        var cart = await new Cart().cartDelete(seq,req.user.user_id);
         res.json(cart);
     }catch(err){
         console.log(err);
     }
-    
 });
 
+router.post('/cart/checkDelete', async (req,res)=>{
+    try{
+        var seq = JSON.parse(req.body.seq);
+        var cart = new Cart();
+        for(var i = 0 ; i < seq.length; i++){
+            await cart.cartDelete(seq[i],req.user.user_id);
+        }
+        res.json(true);
+    }catch(err){
+        console.log(err);
+        res.json({error:"삭제에 실패했습니다."});
+    }
+});
 module.exports = router;

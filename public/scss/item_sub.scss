@@ -13,8 +13,9 @@ section {
       width: 100%;
       display: flex;
       padding: 40px;
-      img {
-        width: 100%;
+      img[alt="제품이미지"] {
+        width: 450px;
+        height: 450px;
         display: block;
         border: 1px solid #999;
         margin-right: 50px;
@@ -50,8 +51,27 @@ section {
         .order_box {
           position: absolute;
           display: flex;
+          align-items: center;
           bottom: 0;
           right: 0;
+          label {
+            font-size: 15px;
+            color: #777;
+            margin-right: 5px;
+          }
+          input {
+            text-align: center;
+            width: 50px;
+            height: 40px;
+            font-size: 17px;
+            margin-right: 5px;
+            outline: none;
+            caret-color: #fff;
+          }
+          input[type="number"]:hover::-webkit-inner-spin-button {
+            width: 17px;
+            height: 40px;
+          }
           img {
             margin: 5px;
             border: none;

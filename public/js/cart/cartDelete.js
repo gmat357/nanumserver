@@ -20,7 +20,6 @@ function cartDeleteSubmit(data){
         type:"post",
         data:{seq:data},
         success:function(data){
-            console.log(data);
             alert(data.message);
             location.href="/cart";
             console.log("삭제완료");

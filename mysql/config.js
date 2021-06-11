@@ -2,5 +2,6 @@ module.exports = {
     host:"localhost",
     user:"root",
     password:"speed",
-    database:"nanummart"
+    database:"nanummart",
+    connectionLimit:30
 };

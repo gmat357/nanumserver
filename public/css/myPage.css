@@ -1,0 +1,173 @@
+section {
+  width: 1300px;
+  padding: 40px 0 40px 210px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section * {
+  font-family: "S-CoreDream-3Light";
+}
+
+section h2 {
+  margin: 0 45px;
+  font-family: "S-CoreDream-5Medium";
+  font-size: 27px;
+  color: #3c6904;
+  border-bottom: 3px solid #739f2e;
+}
+
+section .user_info_table {
+  text-align: left;
+  border-collapse: collapse;
+  width: calc(100% - 90px);
+  margin: 10px auto;
+  padding: 0 45px;
+  margin-bottom: 80px;
+}
+
+section .user_info_table tbody tr th {
+  width: 15%;
+  border: 1px solid #bbb;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+section .user_info_table tbody tr td {
+  width: 85%;
+  font-size: 14px;
+  padding: 10px 15px;
+  border: 1px solid #bbb;
+  position: relative;
+}
+
+section .user_info_table tbody tr td form input {
+  outline: none;
+  border: 1px solid #bbb;
+  padding: 3px 5px;
+}
+
+section .user_info_table tbody tr td form input[type="submit"] {
+  position: absolute;
+  right: 15px;
+}
+
+section .user_info_table tbody tr td form select {
+  outline: none;
+  border: 1px solid #bbb;
+  padding: 3px 5px;
+}
+
+section .user_info_table tbody tr td form .reTouch {
+  font-weight: 700;
+  background-color: #fff;
+  padding: 3px 20px;
+  margin-left: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+section .order_history {
+  text-align: center;
+  border-collapse: collapse;
+  width: calc(100% - 90px);
+  margin: 10px auto;
+  padding: 0 45px;
+}
+
+section .order_history thead tr th {
+  border: 1px solid #bbb;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+section .order_history thead tr th:nth-of-type(1) {
+  width: 15%;
+}
+
+section .order_history thead tr th:nth-of-type(2) {
+  width: 38%;
+}
+
+section .order_history thead tr th:nth-of-type(3) {
+  width: 7%;
+}
+
+section .order_history thead tr th:nth-of-type(4) {
+  width: 15%;
+}
+
+section .order_history thead tr th:nth-of-type(5) {
+  width: 15%;
+}
+
+section .order_history thead tr th:nth-of-type(6) {
+  width: 15%;
+}
+
+section .order_history tbody tr td {
+  font-size: 14px;
+  padding: 10px 15px;
+  border: 1px solid #bbb;
+}
+
+section .order_history tbody tr td .delivery_success {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+section .order_history tbody tr td .delivery_loading {
+  color: #0d00ff;
+  font-weight: 700;
+}
+
+section .order_history tbody tr .product_name_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-bottom: 1px solid #bbb;
+}
+
+section .order_history tbody tr .product_name_img .product_info {
+  width: 100%;
+}
+
+section .order_history tbody tr .product_name_img .product_info li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0;
+}
+
+section .order_history tbody tr .product_name_img .product_info li img {
+  width: 58px;
+  height: 58px;
+  margin-right: 15px;
+}
+
+section .order_history tbody tr .product_name_img .product_info li .product_title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .order_history tbody tr .order_cancel {
+  padding: 0;
+}
+
+section .order_history tbody tr .order_cancel .reTouch,
+section .order_history tbody tr .order_cancel .orderCencelBtn {
+  display: inline-block;
+  font-weight: 700;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 3px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+}

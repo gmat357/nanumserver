@@ -1,5 +1,4 @@
 getCart();
-
 function wishList(){
   // 체크박스 
   var allCheckBox = $("#all_check");
@@ -53,8 +52,8 @@ function wishList(){
       sumPrice(nowCount, price);
     });
   });
-
   //합계
+  orderSumPrice();
   function sumPrice(Count, price) {
     var resultPrice = price.children().text();
     var orderPrice = price.next().next();
@@ -66,13 +65,11 @@ function wishList(){
     var orderPrice = $('.order_pirce');
     var sum_price = $('.sum_price');
     var sum = 0;
-    var result = [];
     for (var i = 0; i < orderPrice.length; i++) {
       sum += Number(orderPrice.eq(i).text());
     }
     sum_price.text(sum);
   }
-
 
   //쇼핑계속하기
   var shoping = $('.shoping_btn');
@@ -83,4 +80,5 @@ function wishList(){
   cartDelete();
 
 }
+
 

@@ -17,13 +17,13 @@ $(function(){
         dataType:"json",
         type:"post",
         success:function(data){
-            console.log(data);
             productSumimg.text(data[0].product_img);
             productName.text(data[0].product_nm);
             productPrice.text(data[0].product_pr + "원");
             productStandard.text(data[0].product_st);
             productOrigin.text(data[0].product_og);
             description.append(data[0].product_text);
+            $(".orderBtn").attr("value",data[0].product_seq);
         },error:function(err){
             console.log(err);
         }

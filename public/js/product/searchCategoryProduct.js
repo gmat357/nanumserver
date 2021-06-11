@@ -1,3 +1,12 @@
+function searchMenuPath() { 
+    var uriParams = location.search.substr(1).split('&'); 
+    var param = [];
+    for (var i=0; i<uriParams.length; i++) {
+      param = uriParams[i].split('=');
+    } 
+    return param[1]; 
+  }
+
 function searchTemplate(data){
     var template = "";
     var searchResultList = $(".item_list");
@@ -59,13 +68,14 @@ function searchAjax(navText){
     var navText = navText != undefined ? navText : searchItemText.val();
     var textResult = searchTrim(navText);
     $.ajax({
-        url:"/searchProduct",
+        url:"/searchCategoryProduct/"+searchMenuPath(),
         dataType:"json",
         type:"post",
         data:{text:textResult},
         success:function(data){
             if(data.length == 0){
                 alert("검색결과가 없습니다.");
+                resetProduct();
                 return;
             } 
             menuInfoText.empty();
@@ -86,6 +96,7 @@ $(function(){
         if(e.keyCode == 13){
             if(searchItemText.val() == ""){
                 alert("검색어를 입력해주세요!");
+                resetProduct();
                 return;
             }else{
                 searchAjax();
@@ -97,6 +108,7 @@ $(function(){
     searchSubmit.on("click", function(){
         if(searchItemText.val() == ""){
             alert("검색어를 입력해주세요!");
+            resetProduct();
             return;
         }else{
             searchAjax();

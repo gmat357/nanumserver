@@ -290,7 +290,7 @@ section .wish_wrap form .submit_area {
   padding-top: 20px;
 }
 
-section .wish_wrap form .submit_area input[type="submit"] {
+section .wish_wrap form .submit_area input[type="button"] {
   margin: 5px;
   margin-left: auto;
   width: 130px;

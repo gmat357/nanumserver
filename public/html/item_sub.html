@@ -56,7 +56,9 @@
             </li>
           </ul>
           <div class="order_box">
-            <img src="/public/img/buy_btn.png" alt="주문버튼">
+            <label for="product_count">수량</label>
+            <input type="number" name="product_count" id="product_count" placeholder="0" min="0" max="100">
+            <img src="/public/img/buy_btn.png" alt="주문버튼" class="orderBtn">
             <img src="/public/img/add_btn.png" alt="담기버튼" class="cart">
           </div>
         </div>
@@ -70,8 +72,17 @@
   <script>
     $(".header").load("/public/html/header.html");
     $(".footer").load("/public/html/footer.html");
+    $(function () {
+      var count = $("#product_count")
+      count.change(function () {
+        if (count.val() > 100) {
+          count.val("100");
+        }
+      });
+    });
   </script>
-  <script src="/public/js/getProductSubData.js"></script>
+  <script src="/public/js/product/getProductSubData.js"></script>
+  <script src="/public/js/product/orderAction.js"></script>
 </body>
 
 </html>

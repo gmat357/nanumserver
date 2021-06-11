@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/public/css/footer.css">
   <link rel="stylesheet" href="/public/css/setting.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="/public/js/loginCookie.js"></script>
+  <script src="/public/js/login/loginCookie.js"></script>
 
   <title>나눔마트</title>
 </head>
@@ -30,13 +30,13 @@
         <ul>
           <li class="input_box">
             <input type="text" name="id" id="user_id" placeholder="아이디">
-            <input type="password" name="psw" id="psw" placeholder="비밀번호">
+            <input type="password" name="psw" id="psw" placeholder="비밀번호" value="dnwlssla7!">
             <div class="check_wrap">
               <input type="checkbox" name="id_keep" id="id_keep">
               <label for="id_keep" class="check_box"></label>
               <label for="id_keep">아이디 저장</label>
-              <a href="">아이디찾기</a>
-              <a href="">비밀번호찾기</a>
+              <a href="" class="id_find">아이디찾기</a>
+              <a href="" class="psw_find">비밀번호찾기</a>
             </div>
           </li>
           <li class="submit_box">
@@ -53,7 +53,28 @@
     $(".header").load("/public/html/header.html");
     $(".footer").load("/public/html/footer.html");
   </script>
+  <script>
+    var option = "width = 400, height = 300, location = no, directories = no, top = 0, left = 0";
+    var idFind = $(".id_find");
+    var pswFind = $(".psw_find");
+    idFind.on("click",function(e){
+      e.preventDefault();
+      findId();
+    });
+    pswFind.on("click", function(e){
+      e.preventDefault();
+      findPsw();
+    });
 
+    function findId() {
+      var obj = window.open("/public/html/findId.html", "나눔마트 아이디 찾기", option);
+      obj.document.title = "나눔마트 아이디 찾기"
+    }
+    function findPsw() {
+      var obj = window.open("/public/html/findPsw.html", "나눔마트 아이디 찾기", option);
+      obj.document.title = "나눔마트 아이디 찾기"
+    }
+  </script>
 </body>
 
 </html>

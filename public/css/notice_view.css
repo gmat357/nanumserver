@@ -1,0 +1,65 @@
+section {
+  width: 1300px;
+  padding: 40px 0 40px 210px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section * {
+  font-family: "S-CoreDream-3Light";
+}
+
+section h2 {
+  margin: 0 45px;
+  font-family: "S-CoreDream-5Medium";
+  font-size: 27px;
+  color: #3c6904;
+  border-bottom: 3px solid #739f2e;
+}
+
+section table {
+  width: calc(100% - 90px);
+  margin: 40px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+section table thead tr th {
+  width: 105px;
+  height: 37px;
+  border-bottom: 1px solid #bbb;
+  background: #eeeee6;
+  font-size: 14px;
+}
+
+section table thead tr td {
+  font-size: 14px;
+  height: 37px;
+  border-bottom: 1px solid #bbb;
+  padding: 0 10px;
+}
+
+section table thead tr .name {
+  width: 175px;
+}
+
+section table thead tr .day {
+  width: 175px;
+}
+
+section table tbody tr .contents {
+  height: 282px;
+}
+
+section span {
+  display: block;
+  text-align: center;
+  margin: 0 45px 0 auto;
+  font-size: 13px;
+  width: 50px;
+  padding: 5px 0;
+  color: #fff;
+  background: #757b71;
+  cursor: pointer;
+}

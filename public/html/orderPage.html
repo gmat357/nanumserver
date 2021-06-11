@@ -9,15 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/wishList.css">
-  <link rel="stylesheet" href="../css/orderPage.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/setting.css">
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/public/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="/public/slick/slick-theme.css" />
+  <link rel="stylesheet" href="/public/css/header.css">
+  <link rel="stylesheet" href="/public/css/nav.css">
+  <link rel="stylesheet" href="/public/css/wishList.css">
+  <link rel="stylesheet" href="/public/css/orderPage.css">
+  <link rel="stylesheet" href="/public/css/footer.css">
+  <link rel="stylesheet" href="/public/css/setting.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 
   <title>나눔마트</title>
 </head>
@@ -26,17 +27,15 @@
   <header class="header"></header>
   <section class="section">
     <div class="wish_wrap">
-      <img src="../img/wish2.jpg" alt="주문서작성">
-      <form action="#">
+      <img src="/public/img/wish2.jpg" alt="주문서작성">
+      <form action="/bankOrder" class="orderForm" method="post" value="">
         <table class="wish_table">
           <thead>
             <tr>
-              <th colspan=" 6" class="wish_count">일반상품 0개</th>
+              <th colspan="6" class="wish_count">일반상품 0개</th>
             </tr>
             <tr>
               <th>
-                <input type="checkbox" name="all_check" id="all_check">
-                <label for="all_check" class="check_box" id="all_check_box"></label>
               </th>
               <th>이미지</th>
               <th>상품정보</th>
@@ -45,38 +44,12 @@
               <th>합계</th>
             </tr>
           </thead>
-          <tbody>
-
-            <tr class="item_num">
-              <td>
-                <input type="checkbox" name="wish_list1" id="wish_list1" class="wish_check">
-                <label for="wish_list1" class="check_box"></label>
-              </td>
-              <td>
-                <img src="../img/flower.jpg" alt="상품이미지">
-              </td>
-              <td>상품명</td>
-              <td class="item_price"><span>10000</span> 원</td>
-              <td>
-                <ul style="border:none">
-                  <li class="order_item_count" style="border:none">0</li>
-                  <!-- <li class="count_btn">
-                    <p class="up_btn"></p>
-                    <p class="down_btn"></p>
-                  </li> -->
-                </ul>
-              </td>
-              <td class="order_pirce" style="border-right: 1px solid #bbb;">0</td>
-            </tr>
+          <tbody class ="order_data">
             <tr class="sum_price_area">
               <td colspan="7">상품구매금액 총 합계 : <b class="sum_price"></b><span> 원</span></td>
-            </tr>
+          </tr>
           </tbody>
         </table>
-        <div class="select_product">
-          <p>선택한상품을</p>
-          <p class="select_cancel_btn">삭제</p>
-        </div>
         <div class="submit_area">
         </div>
         <div class="delivery_wrap">
@@ -87,6 +60,7 @@
               <tr>
                 <th>배송지 선택</th>
                 <td>
+                  <input type="hidden" name="product" class="product">
                   <input type="radio" name="delivery_info" id="user_delivery" value="user_delivery" checked>
                   <label for="user_delivery">회원정보와 동일</label>
                   <input type="radio" name="delivery_info" id="new_delivery" value="new_delivery">
@@ -106,7 +80,7 @@
                   </span>
                   <input type="text" id="sample6_address" placeholder="주소" name="address" required>
                   <input type="text" id="sample6_detailAddress" placeholder="상세주소" name="address" required>
-                  <input type="hidden" id="sample6_extraAddress" placeholder="참고항목" name="address">
+                  <input type="hidden" id="sample6_extraAddress" placeholder="참고항목">
                 </td>
               </tr>
               <tr>
@@ -179,8 +153,7 @@
                     <th>입금은행</th>
                     <td>
                       <select id="bankaccount" name="bankaccount" fw-filter="" fw-label="무통장 입금은행" fw-msg="">
-                        <option value="-1">::: 선택해 주세요. :::</option>
-                        <option value="">은행이름:000000000000
+                        <option value="농협:30231245869 김우진" selected>은행이름:000000000000
                           나눔마트</option>
                       </select>
                     </td>
@@ -201,7 +174,8 @@
               <li>
                 <p>최종결제 금액</p>
                 <p style="color: rgb(255, 0, 0);"><b class="final_price">0</b>원</p>
-                <input type="submit" value="결제하기">
+                <input type="button" class="payment_btn" value="결제하기" style="display:none;">
+                <input type="submit" class="money_btn" value="결제하기">
               </li>
             </ul>
           </div>
@@ -211,13 +185,22 @@
   </section>
   <footer class="footer"></footer>
   <script>
-    $(".header").load("header.html");
-    $(".footer").load("footer.html");
+    $(".header").load("/public/html/header.html");
+    $(".footer").load("/public/html/footer.html");
   </script>
-  <script src="../js/wishList.js"></script>
+  <script>
+    $(function(){
+    orderGetData(parseQueryString());
+  });
+  </script>
+  <script src="/public/js/order/orderList.js"></script>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-  <script src="../js/findPostNumber.js"></script>
-  <script src="../js/wishListOrder.js"></script>
+  <script src="/public/js/findPostNumber.js"></script>
+  <script src="/public/js/order/wishListOrder.js"></script>
+  <script src="/public/js/order/orderGetData.js"></script>
+  <script src="/public/js/order/orderUserInfo.js"></script>
+  <script src="/public/js/order/orderCartDelete.js"></script>
+  <script src="/public/js/order/iamport.js"></script>
 </body>
 
 </html>

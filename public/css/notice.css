@@ -1,0 +1,130 @@
+section {
+  width: 1300px;
+  padding: 40px 0 40px 210px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section * {
+  font-family: "S-CoreDream-3Light";
+}
+
+section h2 {
+  margin: 0 45px;
+  font-family: "S-CoreDream-5Medium";
+  font-size: 27px;
+  color: #3c6904;
+  border-bottom: 3px solid #739f2e;
+}
+
+section table {
+  margin: 40px auto;
+  width: calc(100% - 90px);
+  text-align: center;
+  border-collapse: collapse;
+}
+
+section table thead tr th {
+  padding: 10px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+
+section table thead tr th:nth-of-type(1) {
+  width: 8%;
+}
+
+section table thead tr th:nth-of-type(2) {
+  width: 50%;
+}
+
+section table thead tr th:nth-of-type(3) {
+  width: 8%;
+}
+
+section table thead tr th:nth-of-type(4) {
+  width: 12%;
+}
+
+section table thead tr th:nth-of-type(5) {
+  width: 10%;
+}
+
+section table tbody tr td {
+  padding: 15px;
+  border: 1px solid #bbb;
+  font-family: "S-CoreDream-3Light";
+  font-size: 13px;
+}
+
+section table tbody tr td:nth-of-type(2) {
+  text-align: left;
+}
+
+section table tbody tr td:nth-of-type(2) a {
+  color: #000;
+}
+
+section .paging_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+section .paging_box .prev {
+  margin-left: auto;
+}
+
+section .paging_box .next {
+  margin-right: auto;
+}
+
+section .paging_box .next,
+section .paging_box .prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .paging_box .next img,
+section .paging_box .prev img {
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+section .paging_box .page_num_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+section .paging_box .page_num_box p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+section .paging_box .page_num_box::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  background: #495164;
+}
+
+section .paging_box span {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+}
