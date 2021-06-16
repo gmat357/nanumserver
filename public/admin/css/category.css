@@ -1,0 +1,174 @@
+.section_wrap {
+  padding: 30px 142.5px;
+}
+
+.section_wrap h1 {
+  color: #5e9d0e;
+  border-bottom: 3px solid #5e9d0e;
+  width: 1280px;
+}
+
+.section_wrap h2 {
+  margin: 40px 40px 10px 40px;
+}
+
+.section_wrap form {
+  padding: 0 40px;
+  width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.section_wrap form .ul_wrap {
+  width: 340px;
+  margin-right: 50px;
+}
+
+.section_wrap form .ul_wrap .remove_btn {
+  width: 55px;
+  margin-left: auto;
+  border: 1px solid #999;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.section_wrap form .ul_wrap .remove_btn::before {
+  content: "-";
+  margin: 0 4px;
+  color: #5e9d0e;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section_wrap form .ul_wrap .category_list {
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 10px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.section_wrap form .ul_wrap .category_list .category_item {
+  padding: 5px;
+}
+
+.section_wrap form .ul_wrap .category_list .category_item label {
+  cursor: pointer;
+}
+
+.section_wrap form table {
+  margin-top: 37px;
+  margin-bottom: 10px;
+  width: 600px;
+  border-top: 2px solid #a1a69a;
+  border-bottom: 2px solid #a1a69a;
+  border-collapse: collapse;
+}
+
+.section_wrap form table tr:nth-of-type(1) {
+  height: 70px;
+}
+
+.section_wrap form table tr:nth-of-type(2) {
+  height: 100%;
+  vertical-align: top;
+}
+
+.section_wrap form table tr:nth-of-type(2) th {
+  padding-top: 20px;
+}
+
+.section_wrap form table tr:nth-of-type(2) td {
+  padding-top: 20px;
+}
+
+.section_wrap form table tr:nth-of-type(2) td span {
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  border: 1px solid #bfbfbf;
+  color: #bfbfbf;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.section_wrap form table tr:nth-of-type(2) td span:hover {
+  border: 1px solid #2b2b2b;
+  color: #2b2b2b;
+}
+
+.section_wrap form table tr:nth-of-type(3) {
+  height: 50px;
+}
+
+.section_wrap form table tr th {
+  width: 20%;
+  height: 70px;
+  border-top: 1px solid #a1a69a;
+}
+
+.section_wrap form table tr td {
+  width: 80%;
+  border-top: 1px solid #a1a69a;
+}
+
+.section_wrap form table tr td[colspan="2"] {
+  text-align: right;
+  border: none;
+}
+
+.section_wrap form table tr td[colspan="2"] span,
+.section_wrap form table tr td[colspan="2"] input {
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 16px;
+  padding: 1px 5px;
+  cursor: pointer;
+}
+
+.section_wrap form table tr td[colspan="2"] span {
+  margin-right: 5px;
+}
+
+.section_wrap form table tr td[colspan="2"] span::before {
+  content: "+";
+  margin: 0 4px;
+  color: #5e9d0e;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section_wrap .ok {
+  width: 55px;
+  text-align: center;
+  border: 1px solid #333;
+  padding: 5px 0;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, 150%);
+          transform: translate(-100%, 150%);
+}
+
+.nameBtn {
+  border: 1px solid #cccccc;
+  padding: 2px 10px;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.nameBtn:hover {
+  border: 1px solid black;
+}

@@ -1,0 +1,74 @@
+.section_wrap {
+  padding: 30px 142.5px;
+  h1 {
+    color: #5e9d0e;
+    border-bottom: 3px solid #5e9d0e;
+  }
+  .contents_area {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 15px 0px;
+    form {
+      .submit_area {
+        text-align: right;
+        a {
+          background-color: #757b71;
+          padding: 4.5px 30px;
+          font-size: 12px;
+          font-weight: 400;
+          border: none;
+          color: white;
+          cursor: pointer;
+        }
+        input[type="submit"] {
+          background-color: #757b71;
+          padding: 4.5px 30px;
+          font-size: 12px;
+          font-weight: 400;
+          border: none;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      table {
+        margin: 10px 0px 20px 0px;
+        text-align: center;
+        border-bottom: 1px solid darkgray;
+        border-top: 4px solid #757b71;
+        border-collapse: collapse;
+        width: 100%;
+        tr {
+          th {
+            background-color: #eeeee6;
+            font-size: 15px;
+            font-weight: 400;
+            border-top: 1px solid darkgray;
+            padding: 5px 10px;
+            width: 105px;
+            height: 54px;
+          }
+          td {
+            text-align: left;
+            border-top: 1px solid darkgray;
+            padding: 0px 10px;
+            input {
+              padding: 0px 10px;
+              font-size: 12px;
+              font-weight: 400;
+              border: 1px solid darkgray;
+              border-radius: 5px;
+            }
+            input[id="author"] {
+              width: 226px;
+              height: 34px;
+            }
+            input[id="title"] {
+              width: 616px;
+              height: 34px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

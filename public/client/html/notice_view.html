@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/public/client/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="/public/client/slick/slick-theme.css" />
+  <link rel="stylesheet" href="/public/client/css/header.css">
+  <link rel="stylesheet" href="/public/client/css/nav.css">
+  <link rel="stylesheet" href="/public/client/css/notice_view.css">
+  <link rel="stylesheet" href="/public/client/css/footer.css">
+  <link rel="stylesheet" href="/public/client/css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <title>나눔마트</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <section class="section">
+    <h2>공지사항</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>등록인</th>
+          <td class="name"></td>
+          <th>날짜</th>
+          <td class="day"></td>
+          <th>조회수</th>
+          <td class="view_count"></td>
+        </tr>
+        <tr>
+          <th>제목</th>
+          <td colspan="5" class="title"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="contents" colspan="6">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <span>목록</span>
+  </section>
+  <footer class="footer"></footer>
+  <script>
+    $(".header").load("/public/client/html/header.html");
+    $(".footer").load("/public/client/html/footer.html");
+  </script>
+  <script src="/public/client/js/notice/getNotice.js"></script>
+</body>
+
+</html>

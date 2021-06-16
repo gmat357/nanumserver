@@ -1,0 +1,91 @@
+.section_wrap {
+  padding: 30px 142.5px;
+}
+
+.section_wrap h1 {
+  width: 1280px;
+  color: #5e9d0e;
+  border-bottom: 3px solid #5e9d0e;
+}
+
+.section_wrap form {
+  padding: 30px 0;
+  text-align: right;
+  width: 1280px;
+}
+
+.section_wrap form table {
+  margin-bottom: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.section_wrap form table tr th {
+  background: #eff5e7;
+  border: 1px solid #999;
+  width: 10%;
+  text-align: left;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.section_wrap form table tr td {
+  border: 1px solid #999;
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
+.section_wrap form table tr td input[type="text"] {
+  border: 1px solid #999;
+  border-radius: 0px;
+  width: 400px;
+  outline: none;
+}
+
+.section_wrap form table tr td select {
+  border: 1px solid #999;
+  border-radius: 0px;
+  width: 400px;
+  outline: none;
+}
+
+.section_wrap form table tr td #item_img {
+  display: none;
+}
+
+.section_wrap form table tr td #image_preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section_wrap form table tr td #image_preview img {
+  display: block;
+}
+
+.section_wrap form table tr td #image_preview label[for="item_img"] {
+  display: inline-block;
+  border: 1px solid #999;
+  padding: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.section_wrap form table tr td #image_preview label[for="item_img"] .add_img {
+  margin: 0 auto;
+}
+
+.section_wrap form input[type="submit"] {
+  padding: 10px;
+  font-size: 14px;
+  background: #fff;
+  border: none;
+  color: #fff;
+  background: #5e9d0e;
+  cursor: pointer;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/notice.css">
+  <link rel="stylesheet" href="../css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../ckeditor/ckeditor.js"></script>
+
+  <title>나눔마트-관리자</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <nav class="nav"> </nav>
+  <section class="section">
+    <div class="section_wrap">
+      <h1>공지사항관리</h1>
+      <table>
+        <thead>
+          <tr>
+            <td colspan="6">
+              <span>
+                <p class="write_btn">공지사항 등록</p>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+            <th>관리</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="notice_num">1</td>
+            <td>제목</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="">수정</a>
+              <p class="remove_btn">삭제</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="paging_box">
+        <span class="prev"><img src="../img/paging_left.png" alt="왼쪽 화살표"></span>
+        <span class="page_num_box">
+          <p class="page_num">1</p>
+        </span>
+        <span class="next"><img src="../img/paging_right.png" alt="오른쪽 화살표"></span>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script>
+    $(".header").load("header.html");
+    $(".nav").load("nav.html");
+    $(function () {
+      var nomalCheck = $(".notice_num");
+      //data-val 삽입
+      for (var i = 0; i < nomalCheck.length; i++) {
+        nomalCheck.eq(i).attr("data-value", i + 1);
+      }
+    });
+  </script>
+</body>
+
+</html>

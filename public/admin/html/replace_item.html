@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/public/admin/css/header.css">
+  <link rel="stylesheet" href="/public/admin/css/nav.css">
+  <link rel="stylesheet" href="/public/admin/css/add_item.css">
+  <link rel="stylesheet" href="/public/admin/css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="/public/admin/ckeditor/ckeditor.js"></script>
+
+  <title>나눔마트-관리자</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <nav class="nav"> </nav>
+  <section class="section">
+    <div class="section_wrap">
+      <h1>상품수정</h1>
+      <form action="" method="post" class="dataForm" enctype="multipart/form-data">
+        <table>
+          <tr>
+            <th>상품명</th>
+            <td><input type="text" name="item_name" id="item_name"></td>
+          </tr>
+          <tr>
+            <th>판매가</th>
+            <td><input type="text" name="item_price" id="item_price"> 원</td>
+          </tr>
+          <tr>
+            <th>제품규격</th>
+            <td><input type="text" name="item_standard" id="item_standard"></td>
+          </tr>
+          <tr>
+            <th>원산지</th>
+            <td><input type="text" name="item_origin" id="item_origin"></td>
+          </tr>
+          <tr>
+            <th>아이콘</th>
+            <td>
+              <span>
+                <input type="checkbox" name="item_patch" id="new_item" value="신상품">
+                <label for="new_item"><img src="/public/admin/img/new_item.png" alt=""></label>
+              </span>
+              <span>
+                <input type="checkbox" name="item_patch" id="sale_item" value="할인">
+                <label for="sale_item"><img src="/public/admin/img/sale_item.png" alt=""></label>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>상품분류</th>
+            <td>
+              <select name="category" id="category">
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>대표이미지</th>
+            <td>
+              <div id="image_preview">
+                <img src="/public/admin/img/no_img.png" alt="사진영역" style="width:150px; height:150px;" class="sum_img">
+                <input type="file" name="item_img" id="item_img">
+                <input type="hidden" name="item_prev_img" class="item_prev_img">
+                <label for="item_img" id="img_label"><span class="add_img">파일첨부</span></label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>상품상세설명</th>
+            <td>
+              <textarea name="item_contents" id="item_contents" cols="196" rows="30"></textarea>
+            </td>
+          </tr>
+        </table>
+        <input type="submit" value="등록하기">
+      </form>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script>
+    $(".header").load("/public/admin/html/header.html");
+    $(".nav").load("/public/admin/html/nav.html");
+    $(function () {
+      $(document).ready(function () {
+        CKEDITOR.replace("item_contents", {
+          filebrowserUploadUrl: '/admin/productImg',
+        });
+      });
+      $('#item_img').on('change', function () {
+        ext = $(this).val().split('.').pop().toLowerCase(); //확장자
+        //배열에 추출한 확장자가 존재하는지 체크
+        if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+          resetFormElement($(this)); //폼 초기화
+          window.alert('이미지 파일이 아닙니다! (gif, png, jpg, jpeg 만 업로드 가능)');
+        } else {
+          file = $('#item_img').prop("files")[0];
+          blobURL = window.URL.createObjectURL(file);
+          $('#image_preview img').attr('src', blobURL);
+          $('#image_preview').slideDown();
+          $(this).slideUp();
+        }
+      });
+    });
+  </script>
+  <script src="/public/admin/js/product/selectCategory.js"></script>
+  <script src="/public/admin/js/product/update.js"></script>
+</body>
+
+</html>

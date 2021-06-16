@@ -1,0 +1,43 @@
+.header {
+  width: 1920px;
+  height: 123px;
+  background: url(../img/header_bg.jpg);
+}
+
+.header .header_wrap {
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header_wrap span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 220px;
+  cursor: pointer;
+}
+
+.header .header_wrap span img {
+  margin-left: auto;
+}
+
+.header .header_wrap span h1 {
+  font-size: 26px;
+  color: #fff;
+  font-family: "S-CoreDream-3Light";
+}
+
+.header .header_wrap span p {
+  font-family: "S-CoreDream-3Light";
+  font-size: 14px;
+  color: #fff;
+}
+
+.header .header_wrap .mart_icon {
+  margin: 0 auto;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/public/admin/css/header.css">
+  <link rel="stylesheet" href="/public/admin/css/nav.css">
+  <link rel="stylesheet" href="/public/admin/css/category.css">
+  <link rel="stylesheet" href="/public/admin/css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="/public/admin/ckeditor/ckeditor.js"></script>
+
+  <title>나눔마트-관리자</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <nav class="nav"> </nav>
+  <section class="section">
+    <div class="section_wrap">
+      <h1>카테고리</h1>
+      <h2>카테고리 관리&#8226;설정</h2>
+      <form action="">
+        <span class="ul_wrap">
+          <p class="remove_btn">삭제</p>
+          <ul class="category_list">
+
+          </ul>
+        </span>
+        <table>
+          <tr>
+            <th>카테고리명</th>
+            <td>
+              <input type="text" name="category_name" id="category_name">
+              <input type="button" value="수정" class="nameBtn">
+            </td>
+          </tr>
+          <tr>
+            <th>카테고리 정렬</th>
+            <td>
+              <span class="up">위</span>
+              <span class="down">아래</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <span class="add_category">카테고리추가</span>
+              <input type="button" value="수정" class="updateBtn">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script src="/public/admin/js/category/categoryList.js"></script>
+  <script src="/public/admin/js/category/insertCategory.js"></script>
+  <script src="/public/admin/js/category/selectCategory.js"></script>
+  <script src="/public/admin/js/category/updateCategory.js"></script>
+  <script src="/public/admin/js/category/deleteCategory.js"></script>
+  <script src="/public/admin/js/category/nameUpdateCategory.js"></script>
+
+  <script>
+    $(".header").load("/public/admin/html/header.html");
+    $(".nav").load("/public/admin/html/nav.html");
+  </script>
+</body>
+
+</html>

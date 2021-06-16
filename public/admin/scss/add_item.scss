@@ -1,0 +1,76 @@
+.section_wrap {
+  padding: 30px 142.5px;
+  h1 {
+    width: 1280px;
+    color: #5e9d0e;
+    border-bottom: 3px solid #5e9d0e;
+  }
+  form {
+    padding: 30px 0;
+    text-align: right;
+    width: 1280px;
+    table {
+      margin-bottom: 20px;
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      tr {
+        th {
+          background: #eff5e7;
+          border: 1px solid #999;
+          width: 10%;
+          text-align: left;
+          padding: 10px;
+          vertical-align: top;
+        }
+        td {
+          border: 1px solid #999;
+          padding: 0 4px;
+          vertical-align: middle;
+          input[type="text"] {
+            border: 1px solid #999;
+            border-radius: 0px;
+            width: 400px;
+            outline: none;
+          }
+          select {
+            border: 1px solid #999;
+            border-radius: 0px;
+            width: 400px;
+            outline: none;
+          }
+          #item_img {
+            display: none;
+          }
+          #image_preview {
+            display: flex;
+            align-items: flex-end;
+            img {
+              display: block;
+            }
+            label[for="item_img"] {
+              display: inline-block;
+              border: 1px solid #999;
+              padding: 5px;
+              margin-left: 5px;
+              margin-bottom: 5px;
+              cursor: pointer;
+              .add_img {
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    input[type="submit"] {
+      padding: 10px;
+      font-size: 14px;
+      background: #fff;
+      border: none;
+      color: #fff;
+      background: #5e9d0e;
+      cursor: pointer;
+    }
+  }
+}

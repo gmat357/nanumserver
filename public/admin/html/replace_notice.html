@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/notice_write.css">
+  <link rel="stylesheet" href="../css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../ckeditor/ckeditor.js"></script>
+
+  <title>나눔마트-관리자</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <nav class="nav"> </nav>
+  <section class="section">
+    <div class="section_wrap">
+      <h1>공지사항수정</h1>
+      <div class="contents_area">
+        <form action="" method="POST">
+          <div class="submit_area">
+            <a href="notice_board.html">취소</a>
+            <input type="submit" value="작성">
+          </div>
+          <table>
+            <tr>
+              <th>
+                등록인
+              </th>
+              <td>
+                <input type="text" name="author" id="author">
+              </td>
+            </tr>
+            <tr>
+              <th>제목</th>
+              <td>
+                <input type="text" name="title" id="title">
+              </td>
+            </tr>
+          </table>
+          <textarea name="text" id="contents" cols="196" rows="45"></textarea>
+          <script>
+            $(function () {
+              $(document).ready(function () {
+                CKEDITOR.replace("text", {
+                  filebrowserUploadUrl: '/<%-boardName%>/imgUpload',
+                });
+              });
+            });
+          </script>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script>
+    $(".header").load("header.html");
+    $(".nav").load("nav.html");
+  </script>
+</body>
+
+</html>

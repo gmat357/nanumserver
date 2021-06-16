@@ -1,0 +1,59 @@
+<div class="background_wrap">
+  <div class="dark"></div>
+  <div class="gray"></div>
+</div>
+<div class="nav_wrap">
+  <ul>
+    <a href="/admin">
+      <li><img src="/public/admin/img/nav/icon1.png" alt="">
+        <p>상품등록</p>
+      </li>
+    </a>
+    <a href="/admin/product">
+      <li><img src="/public/admin/img/nav/icon2.png" alt="">
+        <p>상품목록</p>
+      </li>
+    </a>
+    <a href="/admin/category">
+      <li><img src="/public/admin/img/nav/icon3.png" alt="">
+        <p>카테고리</p>
+      </li>
+    </a>
+    <a href="/admin/order">
+      <li><img src="/public/admin/img/nav/icon4.png" alt="">
+        <p>주문관리</p>
+      </li>
+    </a>
+    <a href="/admin/orderCancel">
+      <li><img src="/public/admin/img/nav/icon5.png" alt="">
+        <p>주문취소</p>
+      </li>
+    </a>
+    <a href="/admin/userTable">
+      <li><img src="/public/admin/img/nav/icon6.png" alt="">
+        <p>고객관리</p>
+      </li>
+    </a>
+    <a href="/public/admin/html/notice.html">
+      <li><img src="/public/admin/img/nav/icon7.png" alt="">
+        <p>공지사항관리</p>
+      </li>
+    </a>
+  </ul>
+</div>
+<script>
+  window.setTimeout(function () {
+    autoSize()
+  }, 100);
+  function autoSize() {
+    var body = $('body');
+    var nav = $('.background_wrap');
+    var defaultHeight = nav.outerHeight();
+    var height = (body.outerHeight() - 123);
+    if (height > defaultHeight) {
+      nav.css({
+        'height': height,
+      });
+    }
+  }
+</script>

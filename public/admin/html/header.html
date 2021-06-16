@@ -1,0 +1,32 @@
+<div class="header_wrap">
+  <span class="admin_icon_wrap">
+    <img src="/public/admin/img/admin_icon.png" alt="">
+    <a href="/admin">
+    <h1>관리자 페이지</h1>
+  </a>
+  </span>
+  <img src="/public/admin/img/admin_page_logo.png" alt="" class="mart_icon">
+  <span class="login_icon">
+    <img src="/public/admin/img/logout_icon.png" alt="">
+    <p>로그아웃</p>
+  </span>
+</div>
+
+<script>
+  $(function(){
+    $(".login_icon").on("click", function(){
+      location.href="/admin/logout";
+    });
+  });
+</script>
+<script type="text/javascript">
+  window.onload = function () {
+    var browse = navigator.userAgent.toLowerCase();
+
+    if ((navigator.appName == 'Netscape' && browse.indexOf('trident') != -1) || (browse.indexOf("msie") != -1)) {
+      alert("본 사이트는 크롬버전에 최적화되어있습니다.");
+      window.location.href = "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiq9q3e6Y7xAhVBVGAKHU5tBpsYABAAGgJ0bQ&ohost=www.google.com&cid=CAASEuRo4ICCM0_Qwhn8TLzAoVHRBA&sig=AOD64_1UpArgh2S_jEWE8g1y6MBD7ldZIA&q&adurl&ved=2ahUKEwjzyqje6Y7xAhVNM94KHZd2BJEQ0Qx6BAgCEAE";
+    }
+
+  };
+</script>

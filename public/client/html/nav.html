@@ -1,0 +1,62 @@
+<div class="main_nav_wrap">
+  <a href="/"><img src="/public/client/img/nav_img.jpg" alt="로고이미지" class="logo"></a>
+  <div class="nav_search_box">
+    <div class="nav_search_wrap">
+      <input type="text" name="nav_search" id="nav_search">
+      <img src="/public/client/img/search_icon_gray.png" alt="검색" class="submit_text">
+    </div>
+  </div>
+  <ul class="category">
+    <li class="all_category">
+      <a href="/"><p style="color:white;"><img src="/public/client/img/menu_icon.png" alt="메뉴 이미지">전체 카테고리</p></a>
+    </li>
+
+  </ul>
+  <ul class="user_menu">
+    <a href="/login" class="login">
+      <li>로그인</li>
+    </a>
+    <a href="/join" class="join">
+      <li>회원가입</li>
+    </a>
+    <a href="/logout" class="logout" style="display:none">
+      <li>로그아웃</li>
+    </a>
+    <a href="/">
+      <li>오늘의 행사</li>
+    </a>
+    <a href="/mypage">
+      <li>마이페이지</li>
+    </a>
+    <a href="/notice">
+      <li>공지사항</li>
+    </a>
+  </ul>
+  <ul class="cs_center">
+    <li class="cs_text">CS CENTER</li>
+    <li class="cs_number">063-856-7714</li>
+    <li class="cs_text">AM09:00-PM18:00</li>
+    <li class="cs_text">Sat/Holiday off</li>
+  </ul>
+</div>
+<script>
+  $(window).ready(function () {
+    autoSize()
+  });
+
+  window.setTimeout(function () {
+    autoSize()
+  }, 300);
+  function autoSize() {
+    var html = $('html');
+    var body = $('body');
+    var top_banner = $('.top_banner_wrap');
+    var nav = $('.main_nav_wrap');
+    var height = (body.outerHeight() - top_banner.height());
+    nav.css({
+      'height': height,
+    });
+  }
+</script>
+<script src="/public/client/js/menu/getMenu.js" type="text/javascript"></script>
+<script src="/public/client/js/menu/navSearchProduct.js"></script>

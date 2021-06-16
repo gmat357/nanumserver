@@ -1,0 +1,201 @@
+.section_wrap {
+  padding: 30px 142.5px;
+}
+
+.section_wrap h1 {
+  color: #5e9d0e;
+  border-bottom: 3px solid #5e9d0e;
+}
+
+.section_wrap table {
+  width: 1220px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-bottom: 2px solid #bbb;
+}
+
+.section_wrap table thead tr td {
+  padding: 10px 20px;
+  border: 1px solid #bbb;
+  width: 100%;
+  width: 100%;
+  height: 52px;
+}
+
+.section_wrap table thead tr td span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_wrap table thead tr td span .remove_btn {
+  width: 55px;
+  height: 31px;
+  margin-right: auto;
+  border: 1px solid #999;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  padding: 4.5px 0;
+}
+
+.section_wrap table thead tr td span .remove_btn::before {
+  content: "X";
+  margin: 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.section_wrap table thead tr td span .add_item_btn {
+  width: 115px;
+  height: 31px;
+  padding: 4.5px 0;
+  background: #5e9d0e;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.section_wrap table thead tr th {
+  border: 1px solid #bbb;
+  border-top: 2px solid #bbb;
+  height: 52px;
+  background: #eff5e7;
+}
+
+.section_wrap table thead tr th:nth-of-type(1) {
+  width: 5%;
+}
+
+.section_wrap table thead tr th:nth-of-type(2) {
+  width: 10%;
+}
+
+.section_wrap table thead tr th:nth-of-type(3) {
+  width: 10%;
+}
+
+.section_wrap table thead tr th:nth-of-type(4) {
+  width: 10%;
+}
+
+.section_wrap table thead tr th:nth-of-type(5) {
+  width: 15%;
+}
+
+.section_wrap table thead tr th:nth-of-type(6) {
+  width: 20%;
+}
+
+.section_wrap table thead tr th:nth-of-type(7) {
+  width: 20%;
+}
+
+.section_wrap table thead tr th:nth-of-type(8) {
+  width: 10%;
+}
+
+.section_wrap table tbody tr td {
+  border: 1px solid #bbb;
+  text-align: center;
+  padding: 5px 3px;
+  font-size: 14px;
+}
+
+.section_wrap table tbody tr td:nth-of-type(1) {
+  vertical-align: top;
+}
+
+.section_wrap table tbody tr td:nth-of-type(2) span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_wrap table tbody tr td:nth-of-type(2) span img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.section_wrap table tbody tr td:nth-of-type(8) a {
+  display: block;
+  width: 40px;
+  margin: 0 auto;
+  padding: 4.5px 0;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #999;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.section_wrap .paging_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.section_wrap .paging_box .prev {
+  margin-left: auto;
+}
+
+.section_wrap .paging_box .next {
+  margin-right: auto;
+}
+
+.section_wrap .paging_box .next,
+.section_wrap .paging_box .prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_wrap .paging_box .next img,
+.section_wrap .paging_box .prev img {
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.section_wrap .paging_box .page_num_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.section_wrap .paging_box .page_num_box p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.section_wrap .paging_box .page_num_box::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  background: #495164;
+}
+
+.section_wrap .paging_box span {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+.header {
+  width: 1920px;
+  height: 123px;
+  background: url(../img/header_bg.jpg);
+  .header_wrap {
+    padding: 0 60px;
+    display: flex;
+    span {
+      display: flex;
+      align-items: center;
+      width: 220px;
+      cursor: pointer;
+      img {
+        margin-left: auto;
+      }
+      h1 {
+        font-size: 26px;
+        color: #fff;
+        font-family: "S-CoreDream-3Light";
+      }
+      p {
+        font-family: "S-CoreDream-3Light";
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+    .mart_icon {
+      margin: 0 auto;
+    }
+  }
+}

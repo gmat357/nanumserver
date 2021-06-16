@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/public/admin/css/header.css">
+  <link rel="stylesheet" href="/public/admin/css/login.css">
+  <link rel="stylesheet" href="/public/admin/css/setting.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <title>나눔마트-관리자</title>
+</head>
+
+<body>
+  <header class="header"></header>
+  <section>
+    <div class="login_wrap">
+      <img src="/public/admin/img/login_logo.png" alt="login_logo">
+      <div class="top_area">
+        <h2 class="main_text">Administrator Login</h2>
+        <p class="sub_text">*관리자페이지에 접속하시려면 아이디와 비밀번호를 입력해주세요.</p>
+      </div>
+      <form action="/admin/loginAction" method="POST" class="bottom_area">
+        <input type="text" name="id" placeholder="ID" required>
+        <input type="password" name="psw" placeholder="PW" required>
+        <input type="submit" value="로그인">
+      </form>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+  <script>
+    $(".header").load("header.html");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+section {
+  width: 1920px;
+  height: calc(100vh - 123px);
+  background: #e8e9ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .login_wrap {
+  width: 500px;
+  height: 450px;
+  margin: 0 auto;
+  padding: 100px 60px 40px;
+  text-align: center;
+  background: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+section .login_wrap img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section .login_wrap .top_area .main_text {
+  font-size: 40px;
+  color: #5e9c0b;
+}
+
+section .login_wrap .top_area .sub_text {
+  padding: 10px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+section .login_wrap input[type="text"],
+section .login_wrap input[type="password"] {
+  border: none;
+  border-left: 5px solid #5e9c0b;
+  background-color: #e8e9ec;
+  width: 366px;
+  height: 42px;
+  padding: 5px 10px;
+  margin: 5px 0px;
+}
+
+section .login_wrap input:focus {
+  outline: none;
+}
+
+section .login_wrap input[type="submit"] {
+  margin-top: 50px;
+  padding: 6px 40px;
+  border: none;
+  background-color: #ca7405;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
